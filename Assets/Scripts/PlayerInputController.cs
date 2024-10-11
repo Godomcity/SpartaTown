@@ -10,6 +10,11 @@ public class PlayerInputController : SpartaController
         cam = Camera.main;
     }
 
+    private void Update()
+    {
+        cam.transform.position = gameObject.transform.position + new Vector3(0, 0, -10);
+    }
+
     public void OnMove(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>().normalized;
